@@ -7,7 +7,7 @@ This gem refines `Integer` to provide a unary-style interface.
 #=> 1405006117752879898543142606244511569936384000000000
 ```
 
-The Schönhage–Strassen algorithm is used for efficient factorial calculation.
+A binary-splitting algorithm is used for efficient factorial calculation.
 
 Optional caching is enabled by default for much faster repeated calculations.
 

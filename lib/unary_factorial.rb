@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ##
-# This refinement uses the Schönhage–Strassen algorithm for efficient
+# This refinement uses a binary-splitting algorithm for efficient
 # computation of factorials with results cached by default.
 #
 # Caching dramatically improves performance when portions of the
@@ -53,7 +53,7 @@ class UnaryFactorial < Module
             factorial(from..mid) * factorial(mid.succ..to)
           end
 
-          cache[range] = value if cache
+          cache[range] = value if cache && from == 1
 
           value
         end
